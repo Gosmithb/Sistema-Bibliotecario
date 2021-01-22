@@ -38,8 +38,10 @@ namespace Sistema_Bibliotecario
             {
                 MySqlCommand command = new MySqlCommand(sql, databaseConnection);
                 command.ExecuteNonQuery();
+                // Se intenta dar el ID al usuario al registrarse para poder identificarse facilmente
                 string queryId = "SELECT id FROM users WHERE first_name LIKE '" + first_name_Tbx.Text + "'";
-                MessageBox.Show("Registro Guardado, tu ID es: " + queryId);
+                //***********************************************************************************
+                MessageBox.Show("Registro Guardado, tu ID es: " + queryId); // Muestra todo un string y no solo el ID asignado
             }
             catch (MySqlException ex)
             {
