@@ -23,111 +23,38 @@ namespace Sistema_Bibliotecario
             InitializeComponent();
         }
 
-        private void conectar_Btn_Click(object sender, EventArgs e)
+        private void Search_User_Btn_Click(object sender, EventArgs e)
         {
-            // Prepara la conexión
-            MySqlConnection databaseConnection = new MySqlConnection(connectionString);
-            MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
-            commandDatabase.CommandTimeout = 60;
-            MySqlDataReader reader;
-
-
-            try
-            {
-                //Abrir base de datos
-                databaseConnection.Open();
-                //Ejecutar las consultas
-                reader = commandDatabase.ExecuteReader();
-
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-                        string[] row = { reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3) };
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("No se encontraton datos.");
-                }
-                databaseConnection.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            
         }
 
         private void SaveUser_Btn_Click(object sender, EventArgs e)
         {
-            string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=usuarios;";
-            string query = "INSERT INTO usuarios(`id`, `nombre`, `apellido_paterno`, `apellido_materno`) VALUES (NULL, '" + nombre_Tbx.Text + "', '" + apellidoPaterno_Tbx.Text + "', '" + apellidoMaterno_Tbx.Text + "')";
-            // Que puede ser traducido con un valor a:
-            // INSERT INTO user(`id`, `first_name`, `last_name`, `address`) VALUES (NULL, 'Bruce', 'Wayne', 'Rodriguez')
-
-            MySqlConnection databaseConnection = new MySqlConnection(connectionString);
-            MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
-            commandDatabase.CommandTimeout = 60;
+            string sql = "INSERT INTO users(first_name, last_name, address, age, curp) VALUES ('"+ first_name_Tbx.Text + "', '"+last_name_Tbx.Text + "','"+ address_Tbx.Text + "', '"+ int.Parse(age_Tbx.Text)+"', '"+curp_Tbx.Text + "')";
+            MySqlConnection databaseConnection = Conexion.conexion();
+            databaseConnection.Open();
 
             try
             {
-                databaseConnection.Open();
-                MySqlDataReader myReader = commandDatabase.ExecuteReader();
-
-                MessageBox.Show("Usuario insertado satisfactoriamente");
-
-                databaseConnection.Close();
+                MySqlCommand command = new MySqlCommand(sql, databaseConnection);
+                command.ExecuteNonQuery();
+                string queryId = "SELECT id FROM users WHERE first_name LIKE '" + first_name_Tbx.Text + "'";
+                MessageBox.Show("Registro Guardado, tu ID es: " + queryId);
             }
-            catch (Exception ex)
+            catch (MySqlException ex)
             {
-                // Mostrar cualquier error
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error al guardar: " + ex.Message);
+            }
+            finally
+            {
+                databaseConnection.Close();
             }
         }
 
 
         private void listUsers_Btn_Click(object sender, EventArgs e)
         {
-            string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=usuarios;";
-            // Seleccionar todo
-            string query = "SELECT * FROM usuarios";
-
-            MySqlConnection databaseConnection = new MySqlConnection(connectionString);
-            MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
-            commandDatabase.CommandTimeout = 60;
-            MySqlDataReader reader;
-
-            try
-            {
-                databaseConnection.Open();
-                reader = commandDatabase.ExecuteReader();
-
-
-                // Si se encontraron datos
-                if (reader.HasRows)
-                {
-
-                    while (reader.Read())
-                    {
-                        //                   ID                              Nombre                   Apellido Paterno               Apellido Materno
-                        Console.WriteLine(reader.GetString(0) + " - " + reader.GetString(1) + " - " + reader.GetString(2) + " - " + reader.GetString(3));
-                        // Ejemplo para mostrar en el listView :
-                        string[] row = { reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3) };
-                        var listViewItem = new ListViewItem(row);
-                        usersList_Lv.Items.Add(listViewItem);
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("No se encontro nada");
-                }
-
-                databaseConnection.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+           
         }
 
         private void deleteUser_Btn_Click(object sender, EventArgs e)
@@ -182,5 +109,6 @@ namespace Sistema_Bibliotecario
                 MessageBox.Show(ex.Message);
             }
         }
+
     }
 }

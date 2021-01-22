@@ -29,83 +29,88 @@ namespace Sistema_Bibliotecario
         /// </summary>
         private void InitializeComponent()
         {
-            this.conectar_Btn = new System.Windows.Forms.Button();
-            this.nombre_Tbx = new System.Windows.Forms.TextBox();
-            this.apellidoPaterno_Tbx = new System.Windows.Forms.TextBox();
-            this.apellidoMaterno_Tbx = new System.Windows.Forms.TextBox();
-            this.nombre_Lbl = new System.Windows.Forms.Label();
-            this.apellidoPaterno_Lbl = new System.Windows.Forms.Label();
-            this.apellidoMaterno_Lbl = new System.Windows.Forms.Label();
+            this.Search_User_Btn = new System.Windows.Forms.Button();
+            this.first_name_Tbx = new System.Windows.Forms.TextBox();
+            this.last_name_Tbx = new System.Windows.Forms.TextBox();
+            this.address_Tbx = new System.Windows.Forms.TextBox();
+            this.first_name__Lbl = new System.Windows.Forms.Label();
+            this.last_name_Lbl = new System.Windows.Forms.Label();
+            this.address_Lbl = new System.Windows.Forms.Label();
             this.usersList_Lv = new System.Windows.Forms.ListView();
             this.SaveUser_Btn = new System.Windows.Forms.Button();
             this.listUsers_Btn = new System.Windows.Forms.Button();
             this.deleteUser_Btn = new System.Windows.Forms.Button();
             this.updateUser_Btn = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.datos_Gbx = new System.Windows.Forms.GroupBox();
+            this.curp_Tbx = new System.Windows.Forms.TextBox();
+            this.age_Tbx = new System.Windows.Forms.TextBox();
+            this.curp_Lbl = new System.Windows.Forms.Label();
+            this.age_Lbl = new System.Windows.Forms.Label();
+            this.datos_Gbx.SuspendLayout();
             this.SuspendLayout();
             // 
-            // conectar_Btn
+            // Search_User_Btn
             // 
-            this.conectar_Btn.Location = new System.Drawing.Point(12, 415);
-            this.conectar_Btn.Name = "conectar_Btn";
-            this.conectar_Btn.Size = new System.Drawing.Size(75, 23);
-            this.conectar_Btn.TabIndex = 0;
-            this.conectar_Btn.Text = "Conectar";
-            this.conectar_Btn.UseVisualStyleBackColor = true;
-            this.conectar_Btn.Click += new System.EventHandler(this.conectar_Btn_Click);
+            this.Search_User_Btn.Location = new System.Drawing.Point(12, 321);
+            this.Search_User_Btn.Name = "Search_User_Btn";
+            this.Search_User_Btn.Size = new System.Drawing.Size(75, 23);
+            this.Search_User_Btn.TabIndex = 0;
+            this.Search_User_Btn.Text = "Buscar";
+            this.Search_User_Btn.UseVisualStyleBackColor = true;
+            this.Search_User_Btn.Click += new System.EventHandler(this.Search_User_Btn_Click);
             // 
-            // nombre_Tbx
+            // first_name_Tbx
             // 
-            this.nombre_Tbx.Location = new System.Drawing.Point(12, 77);
-            this.nombre_Tbx.Name = "nombre_Tbx";
-            this.nombre_Tbx.Size = new System.Drawing.Size(100, 20);
-            this.nombre_Tbx.TabIndex = 1;
+            this.first_name_Tbx.Location = new System.Drawing.Point(9, 32);
+            this.first_name_Tbx.Name = "first_name_Tbx";
+            this.first_name_Tbx.Size = new System.Drawing.Size(100, 20);
+            this.first_name_Tbx.TabIndex = 1;
             // 
-            // apellidoPaterno_Tbx
+            // last_name_Tbx
             // 
-            this.apellidoPaterno_Tbx.Location = new System.Drawing.Point(12, 133);
-            this.apellidoPaterno_Tbx.Name = "apellidoPaterno_Tbx";
-            this.apellidoPaterno_Tbx.Size = new System.Drawing.Size(100, 20);
-            this.apellidoPaterno_Tbx.TabIndex = 2;
+            this.last_name_Tbx.Location = new System.Drawing.Point(6, 81);
+            this.last_name_Tbx.Name = "last_name_Tbx";
+            this.last_name_Tbx.Size = new System.Drawing.Size(100, 20);
+            this.last_name_Tbx.TabIndex = 2;
             // 
-            // apellidoMaterno_Tbx
+            // address_Tbx
             // 
-            this.apellidoMaterno_Tbx.Location = new System.Drawing.Point(12, 205);
-            this.apellidoMaterno_Tbx.Name = "apellidoMaterno_Tbx";
-            this.apellidoMaterno_Tbx.Size = new System.Drawing.Size(100, 20);
-            this.apellidoMaterno_Tbx.TabIndex = 3;
+            this.address_Tbx.Location = new System.Drawing.Point(6, 133);
+            this.address_Tbx.Name = "address_Tbx";
+            this.address_Tbx.Size = new System.Drawing.Size(100, 20);
+            this.address_Tbx.TabIndex = 3;
             // 
-            // nombre_Lbl
+            // first_name__Lbl
             // 
-            this.nombre_Lbl.AutoSize = true;
-            this.nombre_Lbl.Location = new System.Drawing.Point(12, 46);
-            this.nombre_Lbl.Name = "nombre_Lbl";
-            this.nombre_Lbl.Size = new System.Drawing.Size(44, 13);
-            this.nombre_Lbl.TabIndex = 4;
-            this.nombre_Lbl.Text = "Nombre";
+            this.first_name__Lbl.AutoSize = true;
+            this.first_name__Lbl.Location = new System.Drawing.Point(6, 16);
+            this.first_name__Lbl.Name = "first_name__Lbl";
+            this.first_name__Lbl.Size = new System.Drawing.Size(44, 13);
+            this.first_name__Lbl.TabIndex = 4;
+            this.first_name__Lbl.Text = "Nombre";
             // 
-            // apellidoPaterno_Lbl
+            // last_name_Lbl
             // 
-            this.apellidoPaterno_Lbl.AutoSize = true;
-            this.apellidoPaterno_Lbl.Location = new System.Drawing.Point(12, 117);
-            this.apellidoPaterno_Lbl.Name = "apellidoPaterno_Lbl";
-            this.apellidoPaterno_Lbl.Size = new System.Drawing.Size(84, 13);
-            this.apellidoPaterno_Lbl.TabIndex = 5;
-            this.apellidoPaterno_Lbl.Text = "Apellido Paterno";
+            this.last_name_Lbl.AutoSize = true;
+            this.last_name_Lbl.Location = new System.Drawing.Point(6, 65);
+            this.last_name_Lbl.Name = "last_name_Lbl";
+            this.last_name_Lbl.Size = new System.Drawing.Size(44, 13);
+            this.last_name_Lbl.TabIndex = 5;
+            this.last_name_Lbl.Text = "Apellido";
             // 
-            // apellidoMaterno_Lbl
+            // address_Lbl
             // 
-            this.apellidoMaterno_Lbl.AutoSize = true;
-            this.apellidoMaterno_Lbl.Location = new System.Drawing.Point(12, 189);
-            this.apellidoMaterno_Lbl.Name = "apellidoMaterno_Lbl";
-            this.apellidoMaterno_Lbl.Size = new System.Drawing.Size(86, 13);
-            this.apellidoMaterno_Lbl.TabIndex = 6;
-            this.apellidoMaterno_Lbl.Text = "Apellido Materno";
+            this.address_Lbl.AutoSize = true;
+            this.address_Lbl.Location = new System.Drawing.Point(6, 117);
+            this.address_Lbl.Name = "address_Lbl";
+            this.address_Lbl.Size = new System.Drawing.Size(52, 13);
+            this.address_Lbl.TabIndex = 6;
+            this.address_Lbl.Text = "Dirección";
             // 
             // usersList_Lv
             // 
             this.usersList_Lv.HideSelection = false;
-            this.usersList_Lv.Location = new System.Drawing.Point(329, 46);
+            this.usersList_Lv.Location = new System.Drawing.Point(278, 18);
             this.usersList_Lv.Name = "usersList_Lv";
             this.usersList_Lv.Size = new System.Drawing.Size(271, 213);
             this.usersList_Lv.TabIndex = 7;
@@ -113,7 +118,7 @@ namespace Sistema_Bibliotecario
             // 
             // SaveUser_Btn
             // 
-            this.SaveUser_Btn.Location = new System.Drawing.Point(110, 415);
+            this.SaveUser_Btn.Location = new System.Drawing.Point(93, 321);
             this.SaveUser_Btn.Name = "SaveUser_Btn";
             this.SaveUser_Btn.Size = new System.Drawing.Size(75, 23);
             this.SaveUser_Btn.TabIndex = 8;
@@ -123,7 +128,7 @@ namespace Sistema_Bibliotecario
             // 
             // listUsers_Btn
             // 
-            this.listUsers_Btn.Location = new System.Drawing.Point(206, 415);
+            this.listUsers_Btn.Location = new System.Drawing.Point(174, 321);
             this.listUsers_Btn.Name = "listUsers_Btn";
             this.listUsers_Btn.Size = new System.Drawing.Size(98, 23);
             this.listUsers_Btn.TabIndex = 9;
@@ -133,7 +138,7 @@ namespace Sistema_Bibliotecario
             // 
             // deleteUser_Btn
             // 
-            this.deleteUser_Btn.Location = new System.Drawing.Point(329, 415);
+            this.deleteUser_Btn.Location = new System.Drawing.Point(278, 321);
             this.deleteUser_Btn.Name = "deleteUser_Btn";
             this.deleteUser_Btn.Size = new System.Drawing.Size(75, 23);
             this.deleteUser_Btn.TabIndex = 10;
@@ -143,7 +148,7 @@ namespace Sistema_Bibliotecario
             // 
             // updateUser_Btn
             // 
-            this.updateUser_Btn.Location = new System.Drawing.Point(429, 415);
+            this.updateUser_Btn.Location = new System.Drawing.Point(359, 321);
             this.updateUser_Btn.Name = "updateUser_Btn";
             this.updateUser_Btn.Size = new System.Drawing.Size(75, 23);
             this.updateUser_Btn.TabIndex = 11;
@@ -151,55 +156,96 @@ namespace Sistema_Bibliotecario
             this.updateUser_Btn.UseVisualStyleBackColor = true;
             this.updateUser_Btn.Click += new System.EventHandler(this.updateUser_Btn_Click);
             // 
-            // button4
+            // datos_Gbx
             // 
-            this.button4.Location = new System.Drawing.Point(535, 265);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 12;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.datos_Gbx.Controls.Add(this.curp_Tbx);
+            this.datos_Gbx.Controls.Add(this.age_Tbx);
+            this.datos_Gbx.Controls.Add(this.curp_Lbl);
+            this.datos_Gbx.Controls.Add(this.age_Lbl);
+            this.datos_Gbx.Controls.Add(this.first_name__Lbl);
+            this.datos_Gbx.Controls.Add(this.first_name_Tbx);
+            this.datos_Gbx.Controls.Add(this.last_name_Lbl);
+            this.datos_Gbx.Controls.Add(this.last_name_Tbx);
+            this.datos_Gbx.Controls.Add(this.address_Lbl);
+            this.datos_Gbx.Controls.Add(this.address_Tbx);
+            this.datos_Gbx.Location = new System.Drawing.Point(12, 3);
+            this.datos_Gbx.Name = "datos_Gbx";
+            this.datos_Gbx.Size = new System.Drawing.Size(260, 293);
+            this.datos_Gbx.TabIndex = 12;
+            this.datos_Gbx.TabStop = false;
+            this.datos_Gbx.Text = "Datos Personales";
+            // 
+            // curp_Tbx
+            // 
+            this.curp_Tbx.Location = new System.Drawing.Point(6, 241);
+            this.curp_Tbx.Name = "curp_Tbx";
+            this.curp_Tbx.Size = new System.Drawing.Size(100, 20);
+            this.curp_Tbx.TabIndex = 10;
+            // 
+            // age_Tbx
+            // 
+            this.age_Tbx.Location = new System.Drawing.Point(6, 184);
+            this.age_Tbx.Name = "age_Tbx";
+            this.age_Tbx.Size = new System.Drawing.Size(100, 20);
+            this.age_Tbx.TabIndex = 9;
+            // 
+            // curp_Lbl
+            // 
+            this.curp_Lbl.AutoSize = true;
+            this.curp_Lbl.Location = new System.Drawing.Point(6, 225);
+            this.curp_Lbl.Name = "curp_Lbl";
+            this.curp_Lbl.Size = new System.Drawing.Size(37, 13);
+            this.curp_Lbl.TabIndex = 8;
+            this.curp_Lbl.Text = "CURP";
+            // 
+            // age_Lbl
+            // 
+            this.age_Lbl.AutoSize = true;
+            this.age_Lbl.Location = new System.Drawing.Point(6, 168);
+            this.age_Lbl.Name = "age_Lbl";
+            this.age_Lbl.Size = new System.Drawing.Size(32, 13);
+            this.age_Lbl.TabIndex = 7;
+            this.age_Lbl.Text = "Edad";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button4);
+            this.ClientSize = new System.Drawing.Size(558, 366);
+            this.Controls.Add(this.datos_Gbx);
             this.Controls.Add(this.updateUser_Btn);
             this.Controls.Add(this.deleteUser_Btn);
             this.Controls.Add(this.listUsers_Btn);
             this.Controls.Add(this.SaveUser_Btn);
             this.Controls.Add(this.usersList_Lv);
-            this.Controls.Add(this.apellidoMaterno_Lbl);
-            this.Controls.Add(this.apellidoPaterno_Lbl);
-            this.Controls.Add(this.nombre_Lbl);
-            this.Controls.Add(this.apellidoMaterno_Tbx);
-            this.Controls.Add(this.apellidoPaterno_Tbx);
-            this.Controls.Add(this.nombre_Tbx);
-            this.Controls.Add(this.conectar_Btn);
+            this.Controls.Add(this.Search_User_Btn);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.datos_Gbx.ResumeLayout(false);
+            this.datos_Gbx.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button conectar_Btn;
-        private System.Windows.Forms.TextBox nombre_Tbx;
-        private System.Windows.Forms.TextBox apellidoPaterno_Tbx;
-        private System.Windows.Forms.TextBox apellidoMaterno_Tbx;
-        private System.Windows.Forms.Label nombre_Lbl;
-        private System.Windows.Forms.Label apellidoPaterno_Lbl;
-        private System.Windows.Forms.Label apellidoMaterno_Lbl;
+        private System.Windows.Forms.Button Search_User_Btn;
+        private System.Windows.Forms.TextBox first_name_Tbx;
+        private System.Windows.Forms.TextBox last_name_Tbx;
+        private System.Windows.Forms.TextBox address_Tbx;
+        private System.Windows.Forms.Label first_name__Lbl;
+        private System.Windows.Forms.Label last_name_Lbl;
+        private System.Windows.Forms.Label address_Lbl;
         private System.Windows.Forms.ListView usersList_Lv;
         private System.Windows.Forms.Button SaveUser_Btn;
         private System.Windows.Forms.Button listUsers_Btn;
         private System.Windows.Forms.Button deleteUser_Btn;
         private System.Windows.Forms.Button updateUser_Btn;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.GroupBox datos_Gbx;
+        private System.Windows.Forms.Label curp_Lbl;
+        private System.Windows.Forms.Label age_Lbl;
+        private System.Windows.Forms.TextBox curp_Tbx;
+        private System.Windows.Forms.TextBox age_Tbx;
     }
 }
 
